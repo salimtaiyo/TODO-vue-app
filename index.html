@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
 </head>
 <body>
     <main id="app">
-        {{title}}
+       <h1> {{title}} </h1>
+       <form action="" @submit.prevent="addTodo">
+           <label for="newTodo"> New Todo</label>
+           <input v-model="newTodo" type="text" value="" name="newTodo" id="newTodo">
+           <button type="submit"> Submit </button>
+       </form>
+       <h4> {{newTodo}}</h4>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
